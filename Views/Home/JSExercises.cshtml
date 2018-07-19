@@ -1,6 +1,6 @@
 ﻿@{
-        ViewBag.Title = "Java Exercises";
-        
+    ViewBag.Title = "Java Exercises";
+
     <html lang="en">
     <head>
         <link rel="icon" href="~/Spectre_statusj.jpg" type="image/jpg" sizes="16x16">
@@ -8,81 +8,76 @@
         <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
     </head>
-<body>
+    <body>
 
-
-
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Math Java</button>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise2modal">Factorial Fun</button>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise3modal">FizzBuzz</button>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise4modal">Pallindrone</button>
-
-    <!-- Modal -->
-    <div id="Exercise1Modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">JS Exercise #1: Working with user data</h4>
-                </div>
-                <div class="modal-body">
-                    <p>In this exercises I will prompt the user for a series of numbers and will make calculations based on those numbers</p>
-
-                    @*Using the BS Grid system to layout my labels and inputs...*@
-                    <div class="container">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-3">Enter number 1:</div>
-                                <div class="col-md-2">
-                                    <input id="ex1num1" type="number" />
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Math Java</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise2modal">Factorial Fun</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise3modal">FizzBuzz</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise4modal">Pallindrone</button>
+        <!-- Modal -->
+        <div id="Exercise1Modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">JS Exercise #1: Working with user data</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>In this exercises I will prompt the user for a series of numbers and will make calculations based on those numbers</p>
+                        @*Using the BS Grid system to layout my labels and inputs...*@
+                        <div class="container">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-3">Enter number 1:</div>
+                                    <div class="col-md-2">
+                                        <input id="ex1num1" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">Enter number 2:</div>
+                                    <div class="col-md-2">
+                                        <input id="ex1num2" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">Enter number 3:</div>
+                                    <div class="col-md-2">
+                                        <input id="ex1num3" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">Enter number 4:</div>
+                                    <div class="col-md-2">
+                                        <input id="ex1num4" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">Enter number 5:</div>
+                                    <div class="col-md-2">
+                                        <input id="ex1num5" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <button id="btnEx1" class="btn btn-info btn-lg">Click Here</button>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">Enter number 2:</div>
-                                <div class="col-md-2">
-                                    <input id="ex1num2" type="number" />
-                                </div>
+                            <div class="col-md-6">
+                                <p id="ex1output"></p>
+                                <p id="ex2output"></p>
+                                <p id="ex3output"></p>
+                                <p id="ex4output"></p>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">Enter number 3:</div>
-                                <div class="col-md-2">
-                                    <input id="ex1num3" type="number" />
-                                </div>
+                            <div class="col-md-1">
+                                <button id="hide">Hide Code</button>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">Enter number 4:</div>
-                                <div class="col-md-2">
-                                    <input id="ex1num4" type="number" />
-                                </div>
+                            <div class="col-md-1">
+                                <button id="show">Show Code</button>
                             </div>
-                            <div class="row">
-                                <div class="col-md-3">Enter number 5:</div>
-                                <div class="col-md-2">
-                                    <input id="ex1num5" type="number" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <button id="btnEx1" class="btn btn-info btn-lg">Click Here</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <p id="ex1output"></p>
-                            <p id="ex2output"></p>
-                            <p id="ex3output"></p>
-                            <p id="ex4output"></p>
-                        </div>
-                        <div class="col-md-1">
-                            <button id="hide">Hide Code</button>
-                        </div>
-                        <div class="col-md-1">
-                            <button id="show">Show Code</button>
-                        </div>
-                        <pre class="brush: js">
+                            <pre class="brush: js">
                              if (num1 == " " || num2 == " " || num3 == " " || num4 == " " || num5 == " ") {
                 alert("Please enter a number");
             }
@@ -94,46 +89,44 @@
                 var result4 = "The mean is " + ((num1 + num2 + num3 + num4 + num5) / 5);
             }
                         </pre>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--Modal-->
-    <div id="Exercise2modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">JS Exercise #2: Countdown Calculations</h3>
-                </div>
-                <div class="modal-body">
-                    <p>This exercise will take a number that will be multipled by all the previous numbers in order of highest to lowest.</p>
-                </div>
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">Enter a positive number: </div>
-                            <input id="factornum" type="number" />
-                            <div class="col-md-4">
-                                <p id="joutput2"></p>
-                            </div>
-                            <div class="col-md-2">
-                                <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="hide1">Hide Code</button>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="show1">Show Code</button>
-                            </div>
-                            <pre class="brush: js">if (num == " ") {
+        <!--Modal-->
+        <div id="Exercise2modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">JS Exercise #2: Countdown Calculations</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>This exercise will take a number that will be multipled by all the previous numbers in order of highest to lowest.</p>
+                    </div>
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3">Enter a positive number: </div>
+                                <input id="factornum" type="number" />
+                                <div class="col-md-4">
+                                    <p id="joutput2"></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
+                                </div>
+                                <div class="col-md-1">
+                                    <button id="hide1">Hide Code</button>
+                                </div>
+                                <div class="col-md-1">
+                                    <button id="show1">Show Code</button>
+                                </div>
+                                <pre class="brush: js">if (num == " ") {
         alert("Please enter a number");
     }
     else {
@@ -146,56 +139,54 @@
         $("#joutput2").text(output);
     }
 </pre>
+                            </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--Modal-->
-    <div id="Exercise3modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">JS Exercise #3: FizzBuzz Math!</h3>
-                </div>
-                <div class="modal-body">
-                    <p>From zero to hundred.</p>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2">Enter #1 (Fizz):</div>
-                        <div class="col-md-2">
-                            <input type="number" id="finput" />
-                        </div>
+        <!--Modal-->
+        <div id="Exercise3modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">JS Exercise #3: FizzBuzz Math!</h3>
                     </div>
-                    <div class="row">
-                        <div class="col-md-2">Enter #2 (Buzz):</div>
-                        <div class="col-md-2">
-                            <input type="number" id="binput" />
-                        </div>
+                    <div class="modal-body">
+                        <p>From zero to hundred.</p>
                     </div>
-                    <div class="row">
-                        <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p id="fboutput"></p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">Enter #1 (Fizz):</div>
+                            <div class="col-md-2">
+                                <input type="number" id="finput" />
+                            </div>
                         </div>
-                        <div class="col-md-1">
-                            <button id="hide2">Hide Code</button>
+                        <div class="row">
+                            <div class="col-md-2">Enter #2 (Buzz):</div>
+                            <div class="col-md-2">
+                                <input type="number" id="binput" />
+                            </div>
                         </div>
-                        <div class="col-md-1">
-                            <button id="show2">Show Code</button>
+                        <div class="row">
+                            <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
                         </div>
-                        <pre class="brush: js">function FizzBuzz(fizz, buzz) {
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p id="fboutput"></p>
+                            </div>
+                            <div class="col-md-1">
+                                <button id="hide2">Hide Code</button>
+                            </div>
+                            <div class="col-md-1">
+                                <button id="show2">Show Code</button>
+                            </div>
+                            <pre class="brush: js">function FizzBuzz(fizz, buzz) {
     var result = [];
     for (var i = 1; i <= 100; i++) {
         var isFizz = ((i % fizz) == 0);
@@ -208,45 +199,44 @@
     }
     return result.join(', ');
 </pre>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <!--Modal-->
-    <div id="Exercise4modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h3 class="modal-title">JS Exercise #4: Reverse Strings</h3>
-                </div>
-                <div class="modal-body">
-                    <p>Let's find out if your words are mirror friendly!</p>
-                </div>
-                <div class="container">
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-3">Enter a word or phrase: </div>
-                            <input id="sentence" type="string" />
-                            <div class="col-md-3">
-                                <p id="joutput4"></p>
-                            </div>
-                            <div class="col-md-4">
-                                <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="hide3">Hide Code</button>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="show3">Show Code</button>
-                            </div>
-                            <pre class="brush: js">var line = $("#sentence").val();
+        <!--Modal-->
+        <div id="Exercise4modal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">JS Exercise #4: Reverse Strings</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Let's find out if your words are mirror friendly!</p>
+                    </div>
+                    <div class="container">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-3">Enter a word or phrase: </div>
+                                <input id="sentence" type="string" />
+                                <div class="col-md-3">
+                                    <p id="joutput4"></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
+                                </div>
+                                <div class="col-md-1">
+                                    <button id="hide3">Hide Code</button>
+                                </div>
+                                <div class="col-md-1">
+                                    <button id="show3">Show Code</button>
+                                </div>
+                                <pre class="brush: js">var line = $("#sentence").val();
         var x = line.length;
         if (x == 0) {
             alert("Please enter a word or phrase");
@@ -263,26 +253,31 @@
             }
         }
 </pre>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    @section scripts {
+        @section scripts {
+            <script src="~/Scripts/ExercisesScript.js"></script>
+            <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
+            <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+            <script type="text/javascript">SyntaxHighlighter.all()</script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <script src="~/Scripts/ExercisesScript.js"></script>
-        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
-        <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
-        <script type="text/javascript">SyntaxHighlighter.all()</script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        }
+        <br />
+        <div class="col-md-12">
+            <div class="row">
+                @Html.ActionLink("Return to Profile", "Index", "Home")
+            </div>
+        </div>
 
-
-    }
 
     </body>
 </html>
-    }
+}
