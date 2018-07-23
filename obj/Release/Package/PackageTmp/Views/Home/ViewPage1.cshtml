@@ -1,0 +1,179 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <link href="~/Content/MyPortfolio.css" rel="stylesheet" />
+
+        <h2>Sandbox</h2>
+
+        <div class="container">
+            @*<div class="row">
+                <div class="col-md-6">
+                    <button data-toggle="collapse" data-target="#code">Show Code</button>
+                </div>
+                <div class="col-md-6 collapse" id="code">
+                    <pre class="brush: js">
+                        function FizzBuzz(fizz, buzz) {
+                            var result = [];
+                            for (var loop = 1; loop <= 100; loop++) {
+                                var isFizz = ((loop % fizz) == 0);
+                                var isBuzz = ((loop % buzz) == 0);
+
+                                if (isFizz && isBuzz) { result.push("<span class='fizzbuzz'>FizzBuzz</span>"); }
+                                else if (isFizz) { result.push("<span class='fizz'>Fizz</span>"); }
+                                else if (isBuzz) { result.push("<span class='buzz'>Buzz</span>") }
+                                else { result.push("<b>" + loop + "</b>"); }
+                            }
+                            return result.join(', ');
+                        }
+                    </pre>
+                </div>
+            </div>*@
+
+            <div class="row">
+                <button class="btn btn-primary btn-sm" id="btnRemote">Pop Remote Modal</button>
+                <div id="remoteModalHost"></div>
+
+            </div>
+            <div class="row">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                    Fizz-Buzz: What you need to know...
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                The Fizz-Buzz exercise is a classic exercise that uses a looping structure in conjunction with a modulus operator
+                                to decide whether to output the word 'Fizz', 'Buzz', 'FizzBuzz' or the value of the loop counter.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                    Fizz-Buzz: The UI...
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">Enter #1 (Fizz):</div>
+                                        <div class="col-md-2">
+                                            <input type="number" id="fbinput1" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">Enter #2 (Buzz):</div>
+                                        <div class="col-md-2">
+                                            <input type="number" id="fbinput2" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <button id="btnfb" class="btn btn-info btn-sm">Click Me</button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p id="fboutput"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                    Fizz-Buzz: The code...
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <pre class="brush: js">
+                            function FizzBuzz(fizz, buzz) {
+                                var result = [];
+                                for (var loop = 1; loop <= 100; loop++) {
+                                    var isFizz = ((loop % fizz) == 0);
+                                    var isBuzz = ((loop % buzz) == 0);
+
+                                    if (isFizz && isBuzz) { result.push("<span class='fizzbuzz'>FizzBuzz</span>"); }
+                                    else if (isFizz) { result.push("<span class='fizz'>Fizz</span>"); }
+                                    else if (isBuzz) { result.push("<span class='buzz'>Buzz</span>") }
+                                    else { result.push("<b>" + loop + "</b>"); }
+                                }
+                                return result.join(', ');
+                            }
+                        </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <input type="number" min="1" max="100">
+            </div>
+        </div>
+
+        @section scripts {
+            <script src="~/Scripts/MyPortfolio.js"></script>
+
+            <script>
+        $("#btnRemote").click(function() {
+            $("#remoteModalHost").load("../RemoteModal.html", function (content) {
+                $("#remoteModalHost").html(content);
+                $("#modalHostTarget").modal('show');
+            })
+        })
+            </script>
+
+            <script>
+        //function RemotePop() {
+        //    var myModal = $('#myModal');
+        //    $.get('/Cloud_Customer_Events/Create/' + id, function (data) {
+        //        $('#mydiv2').html(data);
+        //        $('#myModal .modal-header .modal-title').html('Create Record');
+        //        $('#myModal').appendTo("body").modal('show');
+        //        });
+        //    }
+            </script>
+
+            <script>
+        $("#btnfb").click(function () {
+            //Step 1: Get the data from this page and push into the FizzBuzz JS function
+            var fizzNum = parseInt($("#fbinput1").val());
+            var buzzNum = parseInt($("#fbinput2").val());
+
+            //Step 2: Call the external FizzBuzz function with the data collected from this page
+            var result = FizzBuzz(fizzNum, buzzNum);
+
+            //Step 3: Use the returned data to populate an element on this page
+            $("#fboutput").html(result);
+        });
+            </script>
+        }
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+.modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+.fizz {
+    font-size: large;
+    color: darkorange;
+}
+
+.buzz {
+    font-size: large;
+    color: darkred;
+}
+
+.fizzbuzz {
+    font-size: large;
+    color: gold;
+}
+
+.mylabel {
+    color: black;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.mywidelabel {
+    color: green;
+    font-size: 20px;
+    padding-right: 50px;
+}
