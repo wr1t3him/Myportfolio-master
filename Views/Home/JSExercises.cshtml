@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Java Exercises";
-
+}
     <html lang="en">
     <head>
         <link rel="icon" href="~/Spectre_statusj.jpg" type="image/jpg" sizes="16x16">
@@ -8,7 +8,7 @@
         <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body background-color="#0b2235">
 
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Math Java</button>
@@ -237,8 +237,12 @@
                             <div class="col-md-4">
                                 <div class="row">
                                     <div class="col-md-3">Test Word or Phrase </div>
-                                    <input id="sentence" type="string" />
                                     <div class="col-md-4">
+                                        <input id="sentence" type="string" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
                                         <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
                                     </div>
                                 </div>
@@ -294,7 +298,7 @@
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
             <script type="text/javascript">SyntaxHighlighter.all()</script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
 
             <script>
                 $("#show").click(function () {
@@ -332,4 +336,3 @@
         }
     </body>
 </html>
-}

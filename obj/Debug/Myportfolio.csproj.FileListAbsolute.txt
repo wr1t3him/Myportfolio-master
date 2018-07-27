@@ -179,7 +179,6 @@ C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\bin\Microsoft.AI.Web.xml
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.csprojAssemblyReference.cache
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.csproj.CoreCompileInputs.cache
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.csproj.CopyComplete
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.dll
