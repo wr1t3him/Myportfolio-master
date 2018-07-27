@@ -232,8 +232,8 @@
     <Content Include="templateprofile\css\resume.css" />
     <Content Include="templateprofile\css\resume.min.css" />
     <Content Include="templateprofile\gulpfile.js" />
-    <Content Include="templateprofile\img\me.jpg" />
     <Content Include="templateprofile\img\profile.jpg" />
+    <Content Include="templateprofile\img\Wilten Houston.jpg" />
     <Content Include="templateprofile\index.html" />
     <Content Include="templateprofile\js\resume.js" />
     <Content Include="templateprofile\js\resume.min.js" />
