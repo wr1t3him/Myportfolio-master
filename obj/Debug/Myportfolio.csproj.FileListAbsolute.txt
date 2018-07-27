@@ -183,3 +183,4 @@ C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.csproj.CopyComplete
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.dll
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.pdb
+C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Debug\Myportfolio.csprojAssemblyReference.cache

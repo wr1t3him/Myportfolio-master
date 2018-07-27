@@ -8,7 +8,7 @@
         <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
     </head>
-    <body background-color="#0b2235">
+    <body class="bgcolor">
 
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Math Java</button>
@@ -19,7 +19,7 @@
         <div id="Exercise1Modal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
                 <!-- Modal content-->
-                <div class="modal-content">
+                <div class="modal-content"> @*Can change color of modals here*@
                     <div class="modal-header">
                         @*<button type="button" class="close pull-right" data-dismiss="modal">&times;</button>*@
                         <h4 class="modal-title pull-left">JS Exercise #1: Working with user data</h4>
@@ -286,19 +286,13 @@
                 </div>
             </div>
         </div>
-        <br />
-        <div class="col-md-12">
-            <div class="row">
-                @Html.ActionLink("Return to Profile", "Index", "Home")
-            </div>
-        </div>
-
+        
         @section scripts {
             <script src="~/Scripts/ExercisesScript.js"></script>
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
             <script type="text/javascript">SyntaxHighlighter.all()</script>
-            @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>*@
+          
 
             <script>
                 $("#show").click(function () {
