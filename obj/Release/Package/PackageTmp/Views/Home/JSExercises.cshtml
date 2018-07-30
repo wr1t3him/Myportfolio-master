@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Java Exercises";
-
+}
     <html lang="en">
     <head>
         <link rel="icon" href="~/Spectre_statusj.jpg" type="image/jpg" sizes="16x16">
@@ -8,7 +8,7 @@
         <link href="~/Scripts/SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
         <link href="~/Scripts/SyntaxHighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
+    <body class="bgcolor">
 
         <!-- Trigger the modal with a button -->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Exercise1Modal">Math Java</button>
@@ -19,7 +19,7 @@
         <div id="Exercise1Modal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
                 <!-- Modal content-->
-                <div class="modal-content">
+                <div class="modal-content"> @*Can change color of modals here*@
                     <div class="modal-header">
                         @*<button type="button" class="close pull-right" data-dismiss="modal">&times;</button>*@
                         <h4 class="modal-title pull-left">JS Exercise #1: Working with user data</h4>
@@ -109,24 +109,33 @@
                     </div>
                     <div class="modal-body">
                         <p>This exercise will take a number that will be multipled by all the previous numbers in order of highest to lowest.</p>
-                    </div>
-                    <div class="">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-3">Enter a positive number: </div>
-                                <input id="factornum" type="number" />
-                                <div class="col-md-4">
+
+                        <div class="">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3">Enter Positive Number</div>
+                                    <div class="col-md-4">
+                                        <input id="factornum" type="number" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
                                     <p id="joutput2"></p>
                                 </div>
-                                <div class="col-md-2">
-                                    <button id="btnEx2" class="btn btn-info btn-lg">Begin</button>
-                                </div>
-                                <div class="col-md-1">
-                                    <button id="hide1">Hide Code</button>
-                                </div>
-                                <div class="col-md-1">
-                                    <button id="show1">Show Code</button>
-                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-info" id="hide1">Hide Code</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-info" id="show1">Show Code</button>
+                            </div>
+                            <div class="col-md-12">
                                 <pre id="pre1" class="brush: js">if (num == " ") {
         alert("Please enter a number");
     }
@@ -142,9 +151,9 @@
 </pre>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -159,34 +168,39 @@
                     </div>
                     <div class="modal-body">
                         <p>From zero to hundred.</p>
-                    </div>
-                    <div class="">
-                        <div class="row">
-                            <div class="col-md-2">Enter #1 (Fizz):</div>
+                        <div class="">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-5">Enter #1 (Fizz):</div>
+                                    <div class="col-md-2">
+                                        <input type="number" id="finput" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">Enter #2 (Buzz):</div>
+                                    <div class="col-md-2">
+                                        <input type="number" id="binput" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p id="fboutput"></p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-2">
-                                <input type="number" id="finput" />
+                                <button class="btn btn-info" id="hide2">Hide Code</button>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-2">Enter #2 (Buzz):</div>
                             <div class="col-md-2">
-                                <input type="number" id="binput" />
+                                <button class="btn btn-info" id="show2">Show Code</button>
                             </div>
-                        </div>
-                        <div class="row">
-                            <button id="btnEx3" class="btn btn-info btn-sm">Let's Sizzle</button>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <p id="fboutput"></p>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="hide2">Hide Code</button>
-                            </div>
-                            <div class="col-md-1">
-                                <button id="show2">Show Code</button>
-                            </div>
-                            <pre id="pre2" class="brush: js">function FizzBuzz(fizz, buzz) {
+                            <div class="col-md-12">
+                                <pre id="pre2" class="brush: js">function FizzBuzz(fizz, buzz) {
     var result = [];
     for (var i = 1; i <= 100; i++) {
         var isFizz = ((i % fizz) == 0);
@@ -199,11 +213,12 @@
     }
     return result.join(', ');
 </pre>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -217,24 +232,33 @@
                     </div>
                     <div class="modal-body">
                         <p>Let's find out if your words are mirror friendly!</p>
-                    </div>
-                    <div class="">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-3">Enter a word or phrase: </div>
-                                <input id="sentence" type="string" />
-                                <div class="col-md-3">
+
+                        <div class="">
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <div class="col-md-3">Test Word or Phrase </div>
+                                    <div class="col-md-4">
+                                        <input id="sentence" type="string" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
                                     <p id="joutput4"></p>
                                 </div>
-                                <div class="col-md-4">
-                                    <button id="btnEx4" class="btn btn-info btn-lg">Start</button>
-                                </div>
-                                <div class="col-md-1">
-                                    <button id="hide3">Hide Code</button>
-                                </div>
-                                <div class="col-md-1">
-                                    <button id="show3">Show Code</button>
-                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-info" id="hide3">Hide Code</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-info" id="show3">Show Code</button>
+                            </div>
+                            <div class="col-md-12">
                                 <pre id="pre3" class="brush: js">
                                         var line = $("#sentence").val();
                                         var x = line.length;
@@ -262,20 +286,13 @@
                 </div>
             </div>
         </div>
-
-        <br />
-        <div class="col-md-12">
-            <div class="row">
-                @Html.ActionLink("Return to Profile", "Index", "Home")
-            </div>
-        </div>
-
+        
         @section scripts {
             <script src="~/Scripts/ExercisesScript.js"></script>
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shCore.js"></script>
             <script type="text/javascript" src="~/Scripts/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
             <script type="text/javascript">SyntaxHighlighter.all()</script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          
 
             <script>
                 $("#show").click(function () {
@@ -313,4 +330,3 @@
         }
     </body>
 </html>
-}

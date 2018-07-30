@@ -90,3 +90,4 @@ C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Release\Myportfolio.csproj.CopyComplete
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Release\Myportfolio.dll
 C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Release\Myportfolio.pdb
+C:\Users\wr1t3\Desktop\Coder Foundry\Myportfolio-master\Myportfolio\Myportfolio\obj\Release\Myportfolio.csprojAssemblyReference.cache
